@@ -7,9 +7,9 @@ class City:
     self.lat = lat
     self.lon = lon
 
-  def __str__(self):
-    return 'City {},({},{})'.format(self.name, self.lat, self.lon)
-    # print(f'City {self.name} ({self.lat}, {self.lon})')
+  def __repr__(self):
+    # return 'City {},({},{})'.format(self.name, self.lat, self.lon)
+    return(f'City {self.name} ({self.lat}, {self.lon})')
 
 
 # We have a collection of US cities with population over 750,000 stored in the
@@ -36,6 +36,8 @@ cityreader(cities)
 # Print the list of cities (name, lat, lon), 1 record per line.
 for c in cities:
     print(c)
+
+
 # STRETCH GOAL!
 #
 # Allow the user to input two points, each specified by latitude and longitude.
